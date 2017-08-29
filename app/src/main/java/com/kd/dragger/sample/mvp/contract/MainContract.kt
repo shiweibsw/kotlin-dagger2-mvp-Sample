@@ -5,7 +5,7 @@ package com.kd.dragger.sample.mvp
  */
 interface MainContract {
 
-    interface View :BaseView<Presenter>{
+    interface View :BaseView{
         fun updateUI()
     }
 

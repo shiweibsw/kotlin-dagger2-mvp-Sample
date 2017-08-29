@@ -11,9 +11,6 @@ import javax.inject.Inject
 
 class MainActivity : AppCompatActivity(),MainContract.View {
 
-    override fun setPresenter(presenter: MainContract.Presenter) {
-    }
-
     override fun setLoadingIndicator(active: Boolean) {
     }
 
