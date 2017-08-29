@@ -9,6 +9,6 @@ import dagger.Provides
  */
 @Module
 class MainModule( view: MainContract.View) {
-    var mView:MainContract.View=view
+    var mView: MainContract.View=view
     @Provides fun provideMainView(): MainContract.View=mView
 }

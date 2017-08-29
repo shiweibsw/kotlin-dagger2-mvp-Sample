@@ -11,17 +11,19 @@ import javax.inject.Inject
 
 class MainActivity : AppCompatActivity(),MainContract.View {
 
+    override fun setPresenter(presenter: MainContract.Presenter) {
+    }
+
     override fun setLoadingIndicator(active: Boolean) {
     }
+
     override fun updateUI() {
         Toast.makeText(this,"update ui",Toast.LENGTH_SHORT).show()
-    }
-    override fun setPresenter(presenter: MainContract.Presenter) {
     }
 
     val component by lazy { app.component.plus(MainModule(this)) }
 
-    @Inject lateinit var mPresenter:MainPresenter
+    @Inject lateinit var mPresenter: MainPresenter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
