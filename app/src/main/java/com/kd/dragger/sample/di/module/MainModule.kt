@@ -1,6 +1,7 @@
 package com.kd.dragger.sample.di
 
 import com.kd.dragger.sample.MainActivity
+import com.kd.dragger.sample.di.scopes.PerActivity
 import com.kd.dragger.sample.mvp.MainContract
 import dagger.Module
 import dagger.Provides
@@ -10,5 +11,6 @@ import dagger.Provides
  */
 @Module
 class MainModule(var activity: MainActivity) {
-    @Provides fun provideMainView(): MainContract.View=activity
+    @Provides @PerActivity fun provideMainView(): MainContract.View=activity
+
 }
