@@ -1,6 +1,7 @@
 package com.kd.dragger.sample.di
 
 import com.kd.dragger.sample.App
+import com.kd.dragger.sample.ToastUtil
 import dagger.Component
 import javax.inject.Singleton
 
@@ -13,5 +14,8 @@ interface AppComponent {
 
     fun inject(app:App)
 
-    fun plus(homeModule: MainModule): MainComponent
+    abstract fun getToastUtil(): ToastUtil
+
+    fun plus(mainModule: MainModule): MainComponent
+
 }

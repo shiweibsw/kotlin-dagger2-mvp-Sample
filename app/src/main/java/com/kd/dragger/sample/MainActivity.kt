@@ -2,7 +2,6 @@ package com.kd.dragger.sample
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import android.widget.Toast
 import com.kd.dragger.sample.di.MainModule
 import com.kd.dragger.sample.extensions.app
 import com.kd.dragger.sample.mvp.MainContract
@@ -15,12 +14,13 @@ class MainActivity : AppCompatActivity(),MainContract.View {
     }
 
     override fun updateUI() {
-        Toast.makeText(this,"update ui",Toast.LENGTH_SHORT).show()
+        toast.showToast("update ui")
     }
 
     val component by lazy { app.component.plus(MainModule(this)) }
 
     @Inject lateinit var mPresenter: MainPresenter
+    @Inject lateinit var toast:ToastUtil
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
