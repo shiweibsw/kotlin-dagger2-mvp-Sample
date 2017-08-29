@@ -7,7 +7,7 @@ import javax.inject.Inject
  */
 class MainPresenter  @Inject constructor(var view: MainContract.View):MainContract.Presenter{
     init {
-//        view.setPresenter(this)
+
     }
     override fun loadDatas() {
         view.updateUI()
