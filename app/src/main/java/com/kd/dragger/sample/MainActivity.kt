@@ -14,9 +14,8 @@ class MainActivity : AppCompatActivity(),MainContract.View {
     }
 
     override fun updateUI() {
-        toast.showToast("update ui")
+        toast.showToast("updata ui")
     }
-
     val component by lazy { app.component.plus(MainModule(this)) }
 
     @Inject lateinit var mPresenter: MainPresenter

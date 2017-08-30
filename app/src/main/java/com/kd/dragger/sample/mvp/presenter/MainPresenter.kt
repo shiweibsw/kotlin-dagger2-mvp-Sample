@@ -10,6 +10,7 @@ class MainPresenter  @Inject constructor(var view: MainContract.View):MainContra
 
     }
     override fun loadDatas() {
+
         view.updateUI()
     }
 }

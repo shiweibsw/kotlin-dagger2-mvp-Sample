@@ -11,6 +11,7 @@ import dagger.Provides
  */
 @Module
 class MainModule(var activity: MainActivity) {
+
     @Provides @PerActivity fun provideMainView(): MainContract.View=activity
 
 }
